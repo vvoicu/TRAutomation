@@ -2,7 +2,7 @@ package com.tools.constants;
 
 public class Constants {
 	
-
+	public static String RootFolder = "target/site/thucydides/Models/";
 	public static final String DEFAULT_URL = "https://www.evozon.com/tuberaiders/";
 
 	public static final int Wait_Time = 10000;

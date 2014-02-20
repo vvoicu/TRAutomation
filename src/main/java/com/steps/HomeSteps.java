@@ -5,11 +5,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import org.apache.commons.lang3.RandomStringUtils;
-
 import net.thucydides.core.annotations.Screenshots;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
+
+import org.apache.commons.lang3.RandomStringUtils;
 
 import com.pages.unity.BuyGemsScreen;
 import com.pages.unity.RaiderShop;
@@ -17,7 +17,6 @@ import com.pages.unity.UnityScreens;
 import com.tools.AbstractActions;
 import com.tools.AbstractSteps;
 import com.tools.constants.Constants;
-import com.tools.constants.GeneratedFiles;
 
 public class HomeSteps extends AbstractSteps{
 
@@ -31,10 +30,10 @@ public class HomeSteps extends AbstractSteps{
 	public void generateScreen() throws IOException{
 		String fileName = RandomStringUtils.random(14, true, true) + ".png";
 		
-		File file = new File(GeneratedFiles.RootFolder + fileName);
+		File file = new File(Constants.RootFolder + fileName);
 		String myDirtyString = "<html><body><img border=\"0\" src=\"" + file.getAbsolutePath() + "\" width=\"600\" height=\"800\"></body></html>";
 		
-		ImageIO.write(AbstractActions.getGameRegion().capture(), "png", new File(GeneratedFiles.RootFolder + fileName));
+		ImageIO.write(AbstractActions.getGameRegion().capture(), "png", new File(Constants.RootFolder + fileName));
 		screenshotCapture(myDirtyString);
 	}
 	
