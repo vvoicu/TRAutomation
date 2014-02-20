@@ -118,8 +118,14 @@ public class HomeSteps extends AbstractSteps{
 	
 	@Step
 	@Screenshots(forEachAction=true)
-	public void buyGems20() throws IOException{
+	public void buyGems20() throws IOException {
 		BuyGemsScreen.buyGems20();
+		generateScreen();
+	}
+	
+	@Step
+	public void swapHero() throws IOException{
+		UnityScreens.swapHero();
 		generateScreen();
 	}
 }

@@ -63,5 +63,16 @@ public class UnityScreens extends AbstractActions{
 		
 	}
 	
+	/**
+	 * Try to simulate - Hero Swap 
+	 */
+	public static void swapHero(){
+		ScreenRegion game = getGameRegion();
+		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
+		
+		mouse.drag(centerScreenStart);
+		mouse.drop(Relative.to(centerScreenStart).right(50).getScreenLocation());
+
+	}
 
 }
