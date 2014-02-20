@@ -2,6 +2,7 @@ package com.steps;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 
@@ -12,6 +13,7 @@ import net.thucydides.core.pages.Pages;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import com.pages.unity.BuyGemsScreen;
+import com.pages.unity.ItemsShop;
 import com.pages.unity.RaiderShop;
 import com.pages.unity.UnityScreens;
 import com.tools.AbstractActions;
@@ -124,7 +126,25 @@ public class HomeSteps extends AbstractSteps{
 	
 	@Step
 	public void swapHero() throws IOException{
-		UnityScreens.swapHero();
+		UnityScreens.swapRight();
+		generateScreen();
+	}
+	
+	@Step
+	public void swapUp()throws IOException{
+		UnityScreens.swapAbove();
+		generateScreen();
+	}
+	
+	@Step
+	public void swapDown()throws IOException{
+		UnityScreens.swapBottom();
+		generateScreen();
+	}
+	
+	@Step
+	public void buyItem(URL itemPicture) throws IOException{
+		ItemsShop.buyItem(itemPicture);
 		generateScreen();
 	}
 }

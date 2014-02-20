@@ -64,15 +64,36 @@ public class UnityScreens extends AbstractActions{
 	}
 	
 	/**
-	 * Try to simulate - Hero Swap 
+	 * Simulate Swap actions - (Like finger gestures)
 	 */
-	public static void swapHero(){
+	public static void swapRight(){
 		ScreenRegion game = getGameRegion();
 		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
 		
 		mouse.drag(centerScreenStart);
 		mouse.drop(Relative.to(centerScreenStart).right(50).getScreenLocation());
+	}
+	
+	/**
+	 * Swap bottom action - Resulting action is reversed
+	 */
+	public static void swapBottom(){
+		ScreenRegion game = getGameRegion();
+		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
+		
+		mouse.drag(centerScreenStart);
+		mouse.drop(Relative.to(centerScreenStart).below(150).getScreenLocation());
+	}
 
+	/**
+	 * Swap above action - Resulting action is reversed
+	 */
+	public static void swapAbove(){
+		ScreenRegion game = getGameRegion();
+		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
+		
+		mouse.drag(centerScreenStart);
+		mouse.drop(Relative.to(centerScreenStart).above(180).getScreenLocation());
 	}
 
 }
