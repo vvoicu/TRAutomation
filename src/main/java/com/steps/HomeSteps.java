@@ -191,13 +191,13 @@ public class HomeSteps extends AbstractSteps{
 	}
 	
 	@Step
-	public void swapUpLeft() throws IOException{
+	public void swapUpRight() throws IOException{
 		UnityScreens.swapUp();
 		generateScreen();
 	}
 	
 	@Step
-	public void swapDownLeft() throws IOException{
+	public void swapDownRight() throws IOException{
 		UnityScreens.swapDown();
 		generateScreen();
 	}

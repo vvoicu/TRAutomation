@@ -36,10 +36,11 @@ public class ChangeHeroFromMenuTest{
 		
 		homeSteps.verifyHeroesTitle();
 		
-		homeSteps.swapUp();
+		homeSteps.swapUpRight();
+		
+		homeSteps.swapUpRight();
 		
 		
-		
-
+	
 	}
 }
