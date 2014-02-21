@@ -225,5 +225,18 @@ public class UnityScreens extends AbstractActions{
 		smallRegion.addState(heroBjorn4, Constants.HeroBjorn);
 		
 		smallRegion.addStateChangeEventListener(l);
+//=======
+//		ScreenLocation rightSideScreen = Relative.to(centerScreenStart).right(200).getScreenLocation();
+//		mouse.drag(rightSideScreen);
+//		mouse.drop(Relative.to(rightSideScreen).above(180).getScreenLocation());	
+//>>>>>>> branch 'master' of https://github.com/vvoicu/TRAutomation.git
 	}
+	public static void swapDown(){
+		ScreenRegion game = getGameRegion();
+		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
+		ScreenLocation rightSideScreen = Relative.to(centerScreenStart).right(200).getScreenLocation();
+		mouse.drag(rightSideScreen);
+		mouse.drop(Relative.to(rightSideScreen).below(150).getScreenLocation());	
+	}
+	
 }

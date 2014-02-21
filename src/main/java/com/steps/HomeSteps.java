@@ -175,7 +175,7 @@ public class HomeSteps extends AbstractSteps{
 	}
 	
 	@Step
-	public void swapUpLeft() throws IOException{
+	public void swapUpRight() throws IOException{
 		UnityScreens.swapUp();
 		generateScreen();
 	}
@@ -204,9 +204,4 @@ public class HomeSteps extends AbstractSteps{
 			verificationMessages.append("\n" + e);
 		}
 	}
-	/*@Step
-	public void swapDownLeft() throws IOException{
-		UnityScreens.swapDown();
-		generateScreen();
-	}*/
 }
