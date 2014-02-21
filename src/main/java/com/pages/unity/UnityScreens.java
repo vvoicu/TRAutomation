@@ -170,10 +170,16 @@ public class UnityScreens extends AbstractActions{
 	public static void swapUp(){
 		ScreenRegion game = getGameRegion();
 		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
-		
-		mouse.drag(centerScreenStart);
-		mouse.drop(Relative.to(centerScreenStart).left(50).getScreenLocation());
-	
-		
+		ScreenLocation leftSideScreen = Relative.to(centerScreenStart).left(50).getScreenLocation();
+		mouse.drag(leftSideScreen);
+		mouse.drop(Relative.to(leftSideScreen).above(180).getScreenLocation());	
 	}
+	public static void swapDown(){
+		ScreenRegion game = getGameRegion();
+		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
+		ScreenLocation leftSideScreen = Relative.to(centerScreenStart).left(50).getScreenLocation();
+		mouse.drag(leftSideScreen);
+		mouse.drop(Relative.to(leftSideScreen).below(150).getScreenLocation());	
+	}
+	
 }

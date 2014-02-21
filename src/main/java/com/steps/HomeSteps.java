@@ -196,9 +196,9 @@ public class HomeSteps extends AbstractSteps{
 		generateScreen();
 	}
 	
-	/*@Step
+	@Step
 	public void swapDownLeft() throws IOException{
 		UnityScreens.swapDown();
 		generateScreen();
-	}*/
+	}
 }
