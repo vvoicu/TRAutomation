@@ -16,6 +16,8 @@ import com.tools.AbstractActions;
 import com.tools.constants.Constants;
 
 public class UnityScreens extends AbstractActions{
+	
+	public static String heroCurrentName = Constants.HeroAstrid;
 	/**
 	 * Will wait for the unity load screen 
 	 */
@@ -142,7 +144,7 @@ public class UnityScreens extends AbstractActions{
 		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
 		
 		mouse.drag(centerScreenStart);
-		mouse.drop(Relative.to(centerScreenStart).right(50).getScreenLocation());
+		mouse.drop(Relative.to(centerScreenStart).right(90).getScreenLocation());
 	}
 	
 	/**
@@ -170,9 +172,64 @@ public class UnityScreens extends AbstractActions{
 	public static void swapUp(){
 		ScreenRegion game = getGameRegion();
 		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
-		ScreenLocation rightSideScreen = Relative.to(centerScreenStart).right(200).getScreenLocation();
-		mouse.drag(rightSideScreen);
-		mouse.drop(Relative.to(rightSideScreen).above(180).getScreenLocation());	
+		
+		mouse.drag(centerScreenStart);
+		mouse.drop(Relative.to(centerScreenStart).left(50).getScreenLocation());
+	}
+	
+	/**
+	 * On the main menu will perform swap action and verify that the hero changed
+	 */
+	public static void verifyHeroChange(){
+		
+		ScreenRegion smallRegion = getHeroDisplay();
+		StateChangeListener l = new StateChangeListener(){       				
+			
+			public void stateChanged(StateChangeEvent event) {
+				
+				if(event.getNewState().toString() != null){
+					System.out.println("Save Hero Name: " + event.getNewState().toString());
+					heroCurrentName =  event.getNewState().toString();
+				}
+				
+				System.out.println(event.getScreenRegion() + "'s state is changed " + "from {" + event.getOldState() + "} " + " to {" + event.getNewState() + "}");	
+			}					
+		};
+
+		Target heroAstrid1 = new ImageTarget(RaiderPictures.HeroAstrid1);
+		Target heroAstrid2 = new ImageTarget(RaiderPictures.HeroAstrid2);
+		
+		Target heroSven1 = new ImageTarget(RaiderPictures.HeroSven1);
+		Target heroSven2 = new ImageTarget(RaiderPictures.HeroSven2);
+		Target heroSven3 = new ImageTarget(RaiderPictures.HeroSven3);
+		Target heroSven4 = new ImageTarget(RaiderPictures.HeroSven4);
+		Target heroSven5 = new ImageTarget(RaiderPictures.HeroSven5);
+		
+		Target heroBjorn1 = new ImageTarget(RaiderPictures.HeroBjorn1);
+		Target heroBjorn2 = new ImageTarget(RaiderPictures.HeroBjorn2);
+		Target heroBjorn3 = new ImageTarget(RaiderPictures.HeroBjorn3);
+		Target heroBjorn4 = new ImageTarget(RaiderPictures.HeroBjorn4);
+
+		smallRegion.addState(heroAstrid1, Constants.HeroAstrid);
+		smallRegion.addState(heroAstrid2, Constants.HeroAstrid);
+		
+		smallRegion.addState(heroSven1, Constants.HeroSven);
+		smallRegion.addState(heroSven2, Constants.HeroSven);
+		smallRegion.addState(heroSven3, Constants.HeroSven);
+		smallRegion.addState(heroSven4, Constants.HeroSven);
+		smallRegion.addState(heroSven5, Constants.HeroSven);
+		
+		smallRegion.addState(heroBjorn1, Constants.HeroBjorn);
+		smallRegion.addState(heroBjorn2, Constants.HeroBjorn);
+		smallRegion.addState(heroBjorn3, Constants.HeroBjorn);
+		smallRegion.addState(heroBjorn4, Constants.HeroBjorn);
+		
+		smallRegion.addStateChangeEventListener(l);
+//=======
+//		ScreenLocation rightSideScreen = Relative.to(centerScreenStart).right(200).getScreenLocation();
+//		mouse.drag(rightSideScreen);
+//		mouse.drop(Relative.to(rightSideScreen).above(180).getScreenLocation());	
+//>>>>>>> branch 'master' of https://github.com/vvoicu/TRAutomation.git
 	}
 	public static void swapDown(){
 		ScreenRegion game = getGameRegion();

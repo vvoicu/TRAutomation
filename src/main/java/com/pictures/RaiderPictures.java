@@ -56,5 +56,21 @@ public class RaiderPictures {
 	//Heroes
 	public static final URL BasicHero = RaiderPictures.class.getResource("BasicHero.PNG");
 
+	
+	//Hero States on the main menu
+	public static final URL HeroAstrid1 = RaiderPictures.class.getResource("AstridStateOne.PNG");
+	public static final URL HeroAstrid2 = RaiderPictures.class.getResource("AstridStateTwo.PNG");
+	
+	public static final URL HeroSven1 = RaiderPictures.class.getResource("SvenStateOne.PNG");
+	public static final URL HeroSven2 = RaiderPictures.class.getResource("SvenStateTwo.PNG");
+	public static final URL HeroSven3 = RaiderPictures.class.getResource("SvenStateThree.PNG");
+	public static final URL HeroSven4 = RaiderPictures.class.getResource("SvenStateFour.PNG");
+	public static final URL HeroSven5 = RaiderPictures.class.getResource("SvenStateFive.PNG");
+	
+	public static final URL HeroBjorn1 = RaiderPictures.class.getResource("BjornStateOne.PNG");
+	public static final URL HeroBjorn2 = RaiderPictures.class.getResource("BjornStateTwo.PNG");
+	public static final URL HeroBjorn3 = RaiderPictures.class.getResource("BjornStateThree.PNG");
+	public static final URL HeroBjorn4 = RaiderPictures.class.getResource("BjornStateFour.PNG");
+
 
 }
