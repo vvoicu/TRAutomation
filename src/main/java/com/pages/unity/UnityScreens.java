@@ -182,4 +182,15 @@ public class UnityScreens extends AbstractActions{
 		mouse.drop(Relative.to(rightSideScreen).below(150).getScreenLocation());	
 	}
 	
+	/**
+	 * After swiping down and up verify the hero is the same 
+	 * @throws IOException
+	 */
+	public static void verifyHero(){
+		ScreenRegion game = getGameRegion();
+		game.wait(new ImageTarget(RaiderPictures.BasicHero), Constants.Wait_Time);
+		game.find(new ImageTarget(RaiderPictures.BasicHero));
+		
+	}
+	
 }

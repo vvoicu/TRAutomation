@@ -40,6 +40,12 @@ public class ChangeHeroFromMenuTest{
 		
 		homeSteps.swapUpRight();
 		
+		homeSteps.swapDownRight();
+		
+		homeSteps.swapDownRight();
+		
+		homeSteps.verifyHero();
+		
 		
 	
 	}

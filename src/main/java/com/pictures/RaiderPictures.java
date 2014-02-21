@@ -52,6 +52,9 @@ public class RaiderPictures {
 	public static final URL Gems5Dollar = RaiderPictures.class.getResource("Gems5Dollar.PNG");
 	public static final URL Gems10Dollar = RaiderPictures.class.getResource("Gems10Dollar.PNG");
 	public static final URL Gems20Dollar = RaiderPictures.class.getResource("Gems20Dollar.PNG");
+	
+	//Heroes
+	public static final URL BasicHero = RaiderPictures.class.getResource("BasicHero.PNG");
 
 
 }

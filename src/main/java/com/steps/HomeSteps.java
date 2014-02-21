@@ -201,4 +201,10 @@ public class HomeSteps extends AbstractSteps{
 		UnityScreens.swapDown();
 		generateScreen();
 	}
+	
+	@Step
+	public void verifyHero() throws IOException{
+		UnityScreens.verifyHero();
+		generateScreen();
+	}
 }
