@@ -63,6 +63,77 @@ public class UnityScreens extends AbstractActions{
 		
 	}
 	
+	
+	/**
+	 * Click on the Heroes icon from the Main Menu
+	 */
+	public static void clickOnHeroes(){
+		ScreenRegion game = getGameRegion();
+		game.wait(new ImageTarget(RaiderPictures.HeroesButton), Constants.Wait_Time);
+		ScreenRegion heroes = game.find(new ImageTarget(RaiderPictures.HeroesButton));
+		ScreenLocation heroesButton = Relative.to(heroes).center().getScreenLocation();
+		mouse.doubleClick(heroesButton);
+	}
+	
+
+	/**
+	 * After clicking on Heroes - Verify Heroes menu is opened
+	 * @throws IOException
+	 */
+	public static void verifyHeroesTitlePresence(){
+		ScreenRegion game = getGameRegion();
+		game.wait(new ImageTarget(RaiderPictures.HeroesTitle), Constants.Wait_Time);
+		game.find(new ImageTarget(RaiderPictures.HeroesTitle));
+		
+	}
+	
+	/**
+	 * Click on the Social icon from the Main Menu
+	 */
+	public static void clickOnSocial(){
+		ScreenRegion game = getGameRegion();
+		game.wait(new ImageTarget(RaiderPictures.SocialButton), Constants.Wait_Time);
+		ScreenRegion social = game.find(new ImageTarget(RaiderPictures.SocialButton));
+		ScreenLocation socialButton = Relative.to(social).center().getScreenLocation();
+		mouse.doubleClick(socialButton);
+	}
+	
+
+	/**
+	 * After clicking on Social - Verify Social menu is opened
+	 * @throws IOException
+	 */
+	public static void verifySocialTitlePresence(){
+		ScreenRegion game = getGameRegion();
+		game.wait(new ImageTarget(RaiderPictures.SocialTitle), Constants.Wait_Time);
+		game.find(new ImageTarget(RaiderPictures.SocialTitle));
+		
+	}
+	
+	/**
+	 * Click on the Missions icon from the Main Menu
+	 */
+	public static void clickOnMissions(){
+		ScreenRegion game = getGameRegion();
+		game.wait(new ImageTarget(RaiderPictures.MissionsButton), Constants.Wait_Time);
+		ScreenRegion missions = game.find(new ImageTarget(RaiderPictures.MissionsButton));
+		ScreenLocation missionsButton = Relative.to(missions).center().getScreenLocation();
+		mouse.doubleClick(missionsButton);
+	}
+	
+
+	/**
+	 * After clicking on Missions - Verify Missions menu is opened
+	 * @throws IOException
+	 */
+	public static void verifyMissionsTitlePresence(){
+		ScreenRegion game = getGameRegion();
+		game.wait(new ImageTarget(RaiderPictures.MissionsTitle), Constants.Wait_Time);
+		game.find(new ImageTarget(RaiderPictures.MissionsTitle));
+		
+	}
+	
+	
 	/**
 	 * Simulate Swap actions - (Like finger gestures)
 	 */
@@ -96,4 +167,13 @@ public class UnityScreens extends AbstractActions{
 		mouse.drop(Relative.to(centerScreenStart).above(180).getScreenLocation());
 	}
 
+	public static void swapUp(){
+		ScreenRegion game = getGameRegion();
+		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
+		
+		mouse.drag(centerScreenStart);
+		mouse.drop(Relative.to(centerScreenStart).left(50).getScreenLocation());
+	
+		
+	}
 }

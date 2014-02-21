@@ -16,9 +16,15 @@ public class RaiderPictures {
 	
 	//Menu Screen
 	public static final URL ShopButton =  RaiderPictures.class.getResource("ShopIcon.PNG");
+	public static final URL HeroesButton =  RaiderPictures.class.getResource("HeroesIcon.PNG");
+	public static final URL SocialButton =  RaiderPictures.class.getResource("SocialIcon.PNG");
+	public static final URL MissionsButton =  RaiderPictures.class.getResource("MissionsIcon.PNG");
 
 	//Shop Title 
 	public static final URL ShopTitle = RaiderPictures.class.getResource("ShopTitle.PNG");
+	public static final URL HeroesTitle = RaiderPictures.class.getResource("HeroesTitle.PNG");
+	public static final URL SocialTitle = RaiderPictures.class.getResource("SocialTitle.PNG");
+	public static final URL MissionsTitle = RaiderPictures.class.getResource("MissionsTitle.PNG");
 	
 	//Shop - Lower side menu buttons
 	public static final URL FreeGemsMenu = RaiderPictures.class.getResource("FreeGemsMenu.PNG");

@@ -68,10 +68,52 @@ public class HomeSteps extends AbstractSteps{
 		generateScreen();
 	}
 	
+	@Step
+	@Screenshots(forEachAction=true)
+	public void clickOnHeroes() throws IOException{	
+		UnityScreens.clickOnHeroes();
+		generateScreen();
+	}
+	
+	@Step
+	@Screenshots(forEachAction=true)
+	public void clickOnSocial() throws IOException{	
+		UnityScreens.clickOnSocial();
+		generateScreen();
+	}
+	
+	@Step
+	@Screenshots(forEachAction=true)
+	public void clickOnMissions() throws IOException{	
+		UnityScreens.clickOnMissions();
+		generateScreen();
+	}
+	
 	@Step 
 	@Screenshots(forEachAction=true)
 	public void verifyShopTitle() throws IOException{
 		UnityScreens.verifyShopTitlePresence();
+		generateScreen();
+	}
+	
+	@Step 
+	@Screenshots(forEachAction=true)
+	public void verifyHeroesTitle() throws IOException{
+		UnityScreens.verifyHeroesTitlePresence();
+		generateScreen();
+	}
+	
+	@Step 
+	@Screenshots(forEachAction=true)
+	public void verifySocialTitle() throws IOException{
+		UnityScreens.verifySocialTitlePresence();
+		generateScreen();
+	}
+	
+	@Step 
+	@Screenshots(forEachAction=true)
+	public void verifyMissionsTitle() throws IOException{
+		UnityScreens.verifyMissionsTitlePresence();
 		generateScreen();
 	}
 	
@@ -147,4 +189,16 @@ public class HomeSteps extends AbstractSteps{
 		ItemsShop.buyItem(itemPicture);
 		generateScreen();
 	}
+	
+	@Step
+	public void swapUpLeft() throws IOException{
+		UnityScreens.swapUp();
+		generateScreen();
+	}
+	
+	/*@Step
+	public void swapDownLeft() throws IOException{
+		UnityScreens.swapDown();
+		generateScreen();
+	}*/
 }
