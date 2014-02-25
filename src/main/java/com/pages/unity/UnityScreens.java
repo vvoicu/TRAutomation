@@ -122,7 +122,7 @@ public class UnityScreens extends AbstractActions{
 		ScreenLocation missionsButton = Relative.to(missions).center().getScreenLocation();
 		mouse.doubleClick(missionsButton);
 	}
-	
+
 
 	/**
 	 * After clicking on Missions - Verify Missions menu is opened
@@ -172,9 +172,9 @@ public class UnityScreens extends AbstractActions{
 	public static void swapUp(){
 		ScreenRegion game = getGameRegion();
 		ScreenLocation centerScreenStart = Relative.to(game).center().getScreenLocation();
-		
-		mouse.drag(centerScreenStart);
-		mouse.drop(Relative.to(centerScreenStart).left(50).getScreenLocation());
+		ScreenLocation rightSideScreen = Relative.to(centerScreenStart).right(200).getScreenLocation();
+		mouse.drag(rightSideScreen);
+		mouse.drop(Relative.to(rightSideScreen).above(150).getScreenLocation());	
 	}
 	
 	/**

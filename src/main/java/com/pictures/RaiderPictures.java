@@ -55,6 +55,8 @@ public class RaiderPictures {
 	
 	//Heroes
 	public static final URL BasicHero = RaiderPictures.class.getResource("BasicHero.PNG");
+	public static final URL ChooseShields = RaiderPictures.class.getResource("ChooseShields.PNG");
+	public static final URL ShieldsTitle = RaiderPictures.class.getResource("ShieldsTitle.PNG");
 
 	
 	//Hero States on the main menu

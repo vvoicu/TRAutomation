@@ -2,6 +2,7 @@ package com.steps;
 
 
 import jxl.common.Assert;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -13,7 +14,9 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 
 import org.apache.commons.lang3.RandomStringUtils;
+
 import com.pages.unity.BuyGemsScreen;
+import com.pages.unity.HeroesScreen;
 import com.pages.unity.ItemsShop;
 import com.pages.unity.RaiderShop;
 import com.pages.unity.UnityScreens;
@@ -76,6 +79,7 @@ public class HomeSteps extends AbstractSteps{
 		UnityScreens.clickOnSocial();
 		generateScreen();
 	}
+	
 	
 	@Step
 	public void clickOnMissions() throws IOException{	
@@ -141,6 +145,12 @@ public class HomeSteps extends AbstractSteps{
 	@Step
 	public void buyGems10() throws IOException{
 		BuyGemsScreen.buyGems10();
+		generateScreen();
+	}
+	
+	@Step
+	public void navigateToShields() throws IOException {
+		HeroesScreen.navigateToSheilds();
 		generateScreen();
 	}
 	
